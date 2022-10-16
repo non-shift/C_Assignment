@@ -8,37 +8,37 @@ int main()
 	int b[3]={0,};
 	double x[3]={0,};
 	
-	printf("A Çà·Ä (2Â÷¿ø) ÀÔ·Â\n");//Çà·Ä A ÀÔ·Â¹Ş±â
+	printf("A í–‰ë ¬ (2ì°¨ì›) ì…ë ¥\n");//í–‰ë ¬ A ì…ë ¥ë°›ê¸°
 
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
 		{
-			printf("%dÇà %d¿­:", i + 1, j + 1);
+			printf("%dí–‰ %dì—´:", i + 1, j + 1);
 			scanf_s("%d", &matrixA[i][j]);
 		}
 		printf("\n");
 	}
 
-	printf("b (1Â÷¿ø º¤ÅÍ) ÀÔ·Â\n");//b ÀÔ·Â¹Ş±â
+	printf("b (1ì°¨ì› ë²¡í„°) ì…ë ¥\n");//b ì…ë ¥ë°›ê¸°
 
 	for (int i = 0; i < 3; i++)
 	{
 		scanf_s("%d", &b[i]);
 	}
 
-	//determinant ±¸ÇÏ±â
+	//determinant êµ¬í•˜ê¸°
 	det= (matrixA[0][0] * matrixA[1][1] * matrixA[2][2]) -( matrixA[0][0] * matrixA[1][2] * matrixA[2][1])+ (matrixA[0][1] * matrixA[1][2] * matrixA[2][0]) - (matrixA[0][1] * matrixA[1][0] * matrixA[2][2])+ (matrixA[0][2] * matrixA[1][0] * matrixA[2][1]) - (matrixA[0][2] * matrixA[1][1] * matrixA[2][0]);
 	
 	if (det == 0)
 	{
-		printf("¿ªÇà·ÄÀÌ Á¸Àç ÇÏÁö ¾Ê½À´Ï´Ù. ¸¸Á·ÇÏ´Â ÇØÀÇ °³¼ö°¡ ¹«¼öÈ÷ ¸¹°Å³ª ÇØ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		printf("ì—­í–‰ë ¬ì´ ì¡´ì¬ í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë§Œì¡±í•˜ëŠ” í•´ì˜ ê°œìˆ˜ê°€ ë¬´ìˆ˜íˆ ë§ê±°ë‚˜ í•´ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		return 0;
 	}
 
 	idet = 1 / det;
 	
-	//³ë°¡´Ù¼º ¿ªÇà·Ä ±¸ÇÏ±â
+	//ë…¸ê°€ë‹¤ì„± ì—­í–‰ë ¬ êµ¬í•˜ê¸°
 	inverse[0][0] = (matrixA[1][1] * matrixA[2][2] - matrixA[2][1] * matrixA[1][2]) * idet;
 	inverse[0][1] = (matrixA[0][2] * matrixA[2][1] - matrixA[0][1] * matrixA[2][2]) * idet;
 	inverse[0][2] = (matrixA[0][1] * matrixA[1][2] - matrixA[0][2] * matrixA[1][1]) * idet;
@@ -57,7 +57,7 @@ int main()
 		}
 	}
 
-	printf("xÀÇ °ª:");
+	printf("xì˜ ê°’:");
 
 	for (int i = 0; i < 3; i++)
 	{
